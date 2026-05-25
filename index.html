@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TypeMaster Pro</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- HOME SCREEN -->
+
+    <section id="homeScreen" class="screen active">
+
+        <div class="card">
+
+            <h1>⌨ TypeMaster Pro</h1>
+
+            <p class="subtitle">
+                Improve your typing speed and accuracy
+            </p>
+
+            <div class="field">
+                <label>Difficulty</label>
+
+                <select id="difficulty">
+                    <option>Easy</option>
+                    <option>Medium</option>
+                    <option>Hard</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label>Duration</label>
+
+                <select id="duration">
+                    <option value="30">30 Seconds</option>
+                    <option value="60" selected>60 Seconds</option>
+                    <option value="120">120 Seconds</option>
+                </select>
+            </div>
+
+            <div class="best-card">
+                🔥 Best WPM :
+                <span id="bestScore">0</span>
+            </div>
+
+            <button id="startBtn">
+                Start Challenge
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- TEST SCREEN -->
+
+    <section id="testScreen" class="screen">
+
+        <div class="card">
+
+            <div class="top-bar">
+
+                <div>⏱ <span id="timer">60</span>s</div>
+
+                <div>⚡ <span id="wpm">0</span></div>
+
+                <div>🎯 <span id="accuracy">100</span>%</div>
+
+            </div>
+
+            <div id="paragraph" class="paragraph"></div>
+
+            <textarea
+            id="typingInput"
+            placeholder="Start typing here..."></textarea>
+
+            <div class="bottom-bar">
+
+                <div>
+                    ❌ Errors:
+                    <span id="errors">0</span>
+                </div>
+
+                <div>
+                    ⌨ CPM:
+                    <span id="cpm">0</span>
+                </div>
+
+            </div>
+
+            <div class="progress">
+                <div id="progressFill"></div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- RESULT SCREEN -->
+
+    <section id="resultScreen" class="screen">
+
+        <div class="card">
+
+            <h2>🎉 Test Completed</h2>
+
+            <div class="result-grid">
+
+                <div class="result-box">
+                    <h3>WPM</h3>
+                    <p id="finalWpm">0</p>
+                </div>
+
+                <div class="result-box">
+                    <h3>Accuracy</h3>
+                    <p id="finalAccuracy">0%</p>
+                </div>
+
+                <div class="result-box">
+                    <h3>Errors</h3>
+                    <p id="finalErrors">0</p>
+                </div>
+
+                <div class="result-box">
+                    <h3>Best</h3>
+                    <p id="finalBest">0</p>
+                </div>
+
+            </div>
+
+            <button id="retryBtn">
+                Try Again
+            </button>
+
+        </div>
+
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
